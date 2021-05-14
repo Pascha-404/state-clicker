@@ -3,7 +3,7 @@ import React, {
 } from 'react'
 
 class StateClicker extends Component {
-    constructor(props) {
+    constructor(props){
         super(props);
         this.state = {num: 0, winNum: 7, won: false}
         this.randNum = this.randNum.bind(this)
@@ -21,7 +21,9 @@ class StateClicker extends Component {
         return(
             <div className="StateClicker">
                 <h1>Your number is: {this.state.num}</h1>
-                {this.state.won? <h2>YOU WON!</h2> : <button onClick={this.randNum}>Click me!</button>}
+                {this.state.won 
+                ? <h2>YOU WON!</h2> 
+                : <button onClick={this.randNum}>Random Number</button>}
             </div>
         )
     }
